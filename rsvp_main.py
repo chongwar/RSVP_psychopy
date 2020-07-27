@@ -73,16 +73,18 @@ for trial in range(trial_num):
             texture_notar[notar_rand_idx[notar_count]].draw()
             notar_count += 1
         
+        # send trigger by parallel port
         p_port.setData(trigger)  
         win.flip()
         core.wait(display_time)
     
     win.flip()
+    # read raw eeg data from BioSemi ActiveTwo device
     raw_data = active_two.read(duration=duration)
     data.append(raw_data)
     core.wait(1)
 
 win.close()
 
-np.save('data/block_1', np.array(data))
+np.save('data', np.array(data))
 print('Finish.')
