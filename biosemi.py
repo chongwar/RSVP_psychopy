@@ -1,3 +1,8 @@
+"""
+Builds on example code by Ilya Kuzovkin
+https://github.com/kuz/pyactivetwo/blob/master/pyactivetwo/pyactivetwo.py
+"""
+
 import socket
 import numpy as np
 
@@ -55,9 +60,6 @@ class ActiveTwo():
                     offset = m * 3 * self.nchannels + (ch * 3)
 
                     # The 3 bytes of each sample arrive in reverse order
-                    # sample = (ord(data[offset+2]) << 16)
-                    # sample += (ord(data[offset+1]) << 8)
-                    # sample += ord(data[offset])
                     sample = (data[offset+2] << 16)
                     sample += (data[offset+1] << 8)
                     sample += data[offset]
