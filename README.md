@@ -4,4 +4,5 @@ This repository implements RSVP paradigm with python. It can also interact with 
 ## Requirements
 - Python (3.6 or higher)
 - Psychopy
+
 To run the `rsvp_main.py`, you also need to create a folder with some pictures.
