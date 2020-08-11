@@ -76,7 +76,7 @@ class ActiveTwo():
             # add to the final dataset
             rawdata = np.concatenate((rawdata, signal_buffer), axis=0)
             
-            self.s.close()
+        self.s.close()
         return rawdata
     
         
