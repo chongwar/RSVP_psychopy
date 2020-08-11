@@ -78,6 +78,3 @@ class ActiveTwo():
             
         self.s.close()
         return rawdata
-    
-        
-    
